@@ -1,0 +1,54 @@
+@mixin flex-box ($flex-direction, $justify-content, $align-items){
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items; 
+}
+
+@mixin box-border {
+    border-radius: 3px;
+    background-color: $white;
+    border: solid 1px #ccc;
+}
+
+@mixin ribbon {
+    .ribbon-wrapper {
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        width: 54px;
+        height: 54px;
+        overflow: hidden;
+        .ribbon {
+            position: relative;
+            top: 9px;
+            left: -30px;
+            width: 100px;
+            padding: 3px 0;
+            font: {
+                size: 12px;
+                weight: bold;
+            }
+            color: $white;
+            background-color: #ff9000;
+            text-align: center;
+            text-transform: uppercase;
+            transform: rotate(-45deg);
+            &:before,
+            &:after {
+                position:absolute;
+                bottom: -3px;
+                border-top:   3px solid #e5860b;   
+                border-left:  3px solid transparent;
+                border-right: 3px solid transparent;
+                content: ''; 
+            }
+            &:before {
+                left: 10px;
+            }
+            &:after {
+                right: 11px;
+            }
+        }
+    } //ribbon END
+}

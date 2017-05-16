@@ -1,0 +1,118 @@
+@import "partials/fonts";
+@import "partials/variables";
+@import "partials/mixins";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font: {
+        family: Arial;
+    }
+}
+
+.wrapper {
+    @include flex-box(column, flex-start, stretch);
+    width: 750px;
+    height: 580px;
+    margin: auto;
+    border-radius: 3px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 13px 0 $heading-grey;
+    header {
+        @include flex-box(row, space-between, center);
+        height: 60px;
+        padding: 0 20px;
+        border-radius: 3px 3px 0 0;
+        background-color: #fdfdfd;
+        box-shadow: 0 1px 0 0 #dddddd;
+        .logo {
+            @include flex-box(row, space-between, center);
+            &__img {
+                margin-right: 12px;
+            }
+            &__text {
+                font-weight: 400;
+            }
+        }
+        .close-btn {
+            display: block;
+            width: 15px;
+            height: 35px;
+            background: url('../img/sprite.png') no-repeat -8px 0;
+            cursor: pointer;
+        }
+    }
+    main {
+        @include flex-box(column, flex-start, center);
+        padding-top: 20px;
+        .signature {
+            @include box-border;
+            position: relative;
+            width: 690px;
+            height: 118px;
+            padding: 20px;
+            @include ribbon;
+        }
+        .options {
+            width: 690px;
+            margin-top: 10px;
+            @include flex-box(row, space-between, center);
+            flex-wrap: wrap;
+            .option__item {
+                width: 340px;
+                height: 90px;
+                padding: 17px 20px;
+                @include box-border;
+                .item-title {
+                    font: {
+                        size: 14px;
+                        weight: bold;
+                    }
+                    color: $heading-grey;
+                    text-transform: uppercase;
+                }
+                .item-text {
+                    font-size: 13px;
+                    line-height: 17px;
+                    color: $text-grey;
+                }
+                &:before {
+                    display: block;
+                    width: 45px;
+                    height: 46px;
+                    margin-right: 20px;
+                    float: left;
+                    background: url(../img/sprite.png);
+                    content: '';
+                }
+                &:first-child:before {
+                    background-position: -280px 0;
+                }
+                &:nth-child(2):before {
+                    background-position: -28px 0;
+                }
+                &:nth-child(3):before {
+                    background-position: -338px 0;
+                }
+                &:nth-child(4):before {
+                    width: 40px;
+                    background-position: -184px 0;
+                }
+                &:nth-child(5):before {
+                    background-position: -127px 0;
+                }
+                &:last-child:before {
+                    background-position: -223px 0;
+                }
+            }
+        }
+    }
+}

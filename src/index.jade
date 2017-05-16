@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+    head
+        title="Signature Manager"
+        link(rel="stylesheet" href="css/main.css")
+    body 
+        section.wrapper
+            header
+                div.logo
+                    img(src="./img/logo.png", class="logo__img")
+                    h1.logo__text="Create Your Signature / Initials"
+                div.close-btn
+            main
+                div.signature
+                    div.signature__input
+
+                        p.
+                            Easy way to create your signature or initials <span>type<span> your name or <span>select an option</span> from the bottom to create your signature or initials.
+
+                    div.signature__preview
+                        p="John Smith"
+                    div.ribbon-wrapper
+                        div.ribbon="easy"
+                mixin option__item(name, text)
+                    li.option__item
+                        p.item-title=name
+                        p.item-text=text
+                ul.options
+                    +option__item('draw', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
+                    +option__item('upload', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
+                    +option__item('use camera', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
+                    +option__item('via qr code', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
+                    +option__item('use mobile via sms', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
+                    +option__item('use mobile via email', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
+
+
