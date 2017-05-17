@@ -3,55 +3,61 @@
   <head>
     <title>Signature Manager</title>
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
   </head>
   <body> 
     <section class="wrapper">
       <header>
-        <div class="logo"><img src="./img/logo.png" class="logo__img">
+        <div class="logo"><img src="./img/logo.png" alt="Logo" class="logo__img">
           <h1 class="logo__text">Create Your Signature / Initials</h1>
         </div>
         <div class="close-btn"></div>
       </header>
       <main>
-        <div class="signature">
-          <div class="signature__input">
-            <p>
-              Easy way to create your signature or initials <span>type<span> your name or <span>select an option</span> from the bottom to create your signature or initials.
-              
-            </p>
+        <div class="sign">
+          <div class="sign__type">type</div>
+          <div class="sign__input">
+            <p class="input__text">Easy way to create your signature or initials <span>type</span> your name or <span>select an option</span> from the bottom to create your signature or initials.</p>
+            <div class="input__form">
+              <input type="text" value="John Smith">
+              <button>sign</button>
+            </div>
           </div>
-          <div class="signature__preview">
+          <div class="sign__preview">
             <p>John Smith</p>
           </div>
-          <div class="ribbon-wrapper">
-            <div class="ribbon">easy</div>
-          </div>
+                    <div class="ribbon-wrapper">
+                      <div class="ribbon">easy</div>
+                    </div>
         </div>
         <ul class="options">
-                  <li class="option__item">
+          <li class="option__item">
                     <p class="item-title">draw</p>
                     <p class="item-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                  </li>
-                  <li class="option__item">
+          </li>
+          <li class="option__item">
                     <p class="item-title">upload</p>
                     <p class="item-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                  </li>
-                  <li class="option__item">
+          </li>
+          <li class="option__item">
                     <p class="item-title">use camera</p>
                     <p class="item-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                  </li>
-                  <li class="option__item">
+          </li>
+          <li class="option__item">
                     <p class="item-title">via qr code</p>
                     <p class="item-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                  </li>
-                  <li class="option__item">
+                      <div class="ribbon-wrapper">
+                        <div class="ribbon">fast</div>
+                      </div>
+          </li>
+          <li class="option__item">
                     <p class="item-title">use mobile via sms</p>
                     <p class="item-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                  </li>
-                  <li class="option__item">
+          </li>
+          <li class="option__item">
                     <p class="item-title">use mobile via email</p>
                     <p class="item-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                  </li>
+          </li>
         </ul>
       </main>
     </section>

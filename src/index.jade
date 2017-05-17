@@ -3,34 +3,49 @@ html(lang="en")
     head
         title="Signature Manager"
         link(rel="stylesheet" href="css/main.css")
+        link(href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet")
     body 
         section.wrapper
             header
                 div.logo
-                    img(src="./img/logo.png", class="logo__img")
+                    img(src="./img/logo.png", class="logo__img", alt="Logo")
                     h1.logo__text="Create Your Signature / Initials"
                 div.close-btn
             main
-                div.signature
-                    div.signature__input
+                div.sign
+                    div.sign__type type
+                    div.sign__input
 
-                        p.
-                            Easy way to create your signature or initials <span>type<span> your name or <span>select an option</span> from the bottom to create your signature or initials.
+                        p.input__text.
+                            Easy way to create your signature or initials <span>type</span> your name or <span>select an option</span> from the bottom to create your signature or initials.
+                        div.input__form
+                            input(type="text", value="John Smith")
+                            button="sign"
 
-                    div.signature__preview
+                    div.sign__preview
                         p="John Smith"
-                    div.ribbon-wrapper
-                        div.ribbon="easy"
-                mixin option__item(name, text)
-                    li.option__item
-                        p.item-title=name
-                        p.item-text=text
+                    mixin ribbon(title)
+                        div.ribbon-wrapper
+                            div.ribbon=title
+                    +ribbon('easy')
+                mixin item(name, text)
+                     p.item-title=name
+                     p.item-text=text
                 ul.options
-                    +option__item('draw', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
-                    +option__item('upload', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
-                    +option__item('use camera', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
-                    +option__item('via qr code', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
-                    +option__item('use mobile via sms', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
-                    +option__item('use mobile via email', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
+                    li.option__item
+                        +item('draw', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
+                    li.option__item
+                        +item('upload', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
+                    li.option__item
+                        +item('use camera', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
+                    li.option__item
+                        +item('via qr code', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
+                        +ribbon('fast')
+                    li.option__item
+                        +item('use mobile via sms', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
+                    li.option__item
+                        +item('use mobile via email', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.')
+
+                    
 
 
